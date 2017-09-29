@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/../coursera-scala/assignments/barneshut" value="1470669329079" />
+        <entry key="$PROJECT_DIR$/../coursera-scala/assignments/streams" value="1470669329464" />
+        <entry key="$PROJECT_DIR$/../study/scala-au/notes" value="1484070855017" />
+        <entry key="$PROJECT_DIR$/../study/scala-au/tasks" value="1476018064342" />
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+</project>
