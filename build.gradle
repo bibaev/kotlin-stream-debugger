@@ -35,7 +35,7 @@ apply plugin: 'java'
 apply plugin: "kotlin"
 
 group 'intellij.kotlin'
-version '0.1.5'
+version '0.0.1'
 
 intellij {
     type = 'IC'
@@ -44,7 +44,8 @@ intellij {
     pluginName = 'kotlin-stream-debugger'
     updateSinceUntilBuild = false
 
-    plugins = ['org.jetbrains.kotlin:1.1.51-release-IJ2017.3-1', 'org.jetbrains.debugger.streams:0.1.4']
+    plugins = ['org.jetbrains.kotlin:1.1.51-release-IJ2017.3-1',
+               'org.jetbrains.debugger.streams:0.1.4']
     sandboxDirectory = project.rootDir.canonicalPath + "/.sandbox"
 }
 
