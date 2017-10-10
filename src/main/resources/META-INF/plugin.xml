@@ -18,9 +18,13 @@
     </change-notes>
 
     <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
-    <idea-version since-build="173"/>
+    <idea-version since-build="172"/>
 
-    <depends optional="true">org.jetbrains.kotlin</depends>
+    <depends optional="false">org.jetbrains.kotlin</depends>
     <depends optional="false">org.jetbrains.debugger.streams</depends>
+
+    <extensions defaultExtensionNs="org.jetbrains.debugger.streams">
+        <librarySupport implementation="com.intellij.debugger.streams.kotlin.lib.JavaStandardLibrarySupportProvider"/>
+    </extensions>
 
 </idea-plugin>
