@@ -44,11 +44,11 @@ intellij {
     pluginName = 'kotlin-stream-debugger'
     updateSinceUntilBuild = false
 
-    plugins = ['org.jetbrains.kotlin:1.1.51-release-IJ2017.3-1',
-               'org.jetbrains.debugger.streams']
+    plugins = ['org.jetbrains.kotlin:1.1.51-release-IJ2017.3-1'
+               /*'org.jetbrains.debugger.streams'*/]
     sandboxDirectory = project.rootDir.canonicalPath + "/.sandbox"
 }
 
 dependencies {
-    compile files("${System.properties['java.home']}/../lib/tools.jar")
+    compileOnly files('lib/stream-debugger-1.0.jar')
 }

@@ -37,7 +37,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://C:/Program Files/Java/jdk1.8.0_121/lib/tools.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/stream-debugger-1.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -192,7 +192,6 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.jetbrains.plugins:org.jetbrains.debugger.streams:0.1.4" level="project" />
     <orderEntry type="module-library" scope="PROVIDED">
       <library name="Gradle: org.jetbrains.plugins:org.jetbrains.kotlin:1.1.51-release-IJ2017.3-1">
         <CLASSES>

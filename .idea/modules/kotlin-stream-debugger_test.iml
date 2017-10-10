@@ -35,15 +35,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="kotlin-stream-debugger_main" />
     <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Java/jdk1.8.0_121/lib/tools.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
       <library name="Gradle: com.jetbrains:ideaIC:LATEST-EAP-SNAPSHOT">
         <CLASSES>
           <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/LATEST-EAP-SNAPSHOT/4f2b8b8c4b3e587fa6a99d0e2a66a5d72131e93a/ideaIC-LATEST-EAP-SNAPSHOT/lib/aether-1.1.0-all.jar!/" />
@@ -192,7 +183,6 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="library" name="Gradle: org.jetbrains.plugins:org.jetbrains.debugger.streams:0.1.4" level="project" />
     <orderEntry type="module-library">
       <library name="Gradle: org.jetbrains.plugins:org.jetbrains.kotlin:1.1.51-release-IJ2017.3-1">
         <CLASSES>
