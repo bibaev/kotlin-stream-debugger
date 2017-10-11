@@ -34,15 +34,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../lib/stream-debugger-1.0.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
     <orderEntry type="module-library" scope="PROVIDED">
       <library name="Gradle: com.jetbrains:ideaIC:LATEST-EAP-SNAPSHOT">
         <CLASSES>
@@ -215,6 +206,15 @@
           <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/plugins.jetbrains.com/org.jetbrains.kotlin-master-1.1.51-release-IJ2017.3-1/Kotlin/lib/noarg-ide-plugin.jar!/" />
           <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/plugins.jetbrains.com/org.jetbrains.kotlin-master-1.1.51-release-IJ2017.3-1/Kotlin/lib/sam-with-receiver-compiler-plugin.jar!/" />
           <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/plugins.jetbrains.com/org.jetbrains.kotlin-master-1.1.51-release-IJ2017.3-1/Kotlin/lib/sam-with-receiver-ide-plugin.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="PROVIDED">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../lib/stream-debugger-1.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
