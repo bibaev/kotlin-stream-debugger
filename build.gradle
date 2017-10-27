@@ -31,7 +31,6 @@ compileKotlin {
 
 apply plugin: 'idea'
 apply plugin: 'org.jetbrains.intellij'
-apply plugin: 'java'
 apply plugin: "kotlin"
 
 group 'org.jetbrains.debugger.streams.kotlin'
@@ -47,6 +46,18 @@ intellij {
     plugins = ['org.jetbrains.kotlin:1.1.51-release-IJ2017.3-1'
                /*'org.jetbrains.debugger.streams'*/]
     sandboxDirectory = project.rootDir.canonicalPath + "/.sandbox"
+}
+
+task psiTest(type: Test, group: 'Verification') {
+    include 'com/intellij/debugger/streams/kotlin/psi/*/*'
+}
+
+task dslTest(type: Test, group: 'Verification') {
+    include 'com/intellij/debugger/streams/kotlin/dsl/*'
+}
+
+task execTest(type: Test, group: 'Verification') {
+    include 'com/intellij/debugger/streams/kotlin/exec/*/*'
 }
 
 dependencies {
