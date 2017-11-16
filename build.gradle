@@ -61,7 +61,8 @@ task execTest(type: Test, group: 'Verification') {
 }
 
 dependencies {
+    compile files("${System.properties['java.home']}/../lib/tools.jar")
+    
     compileOnly files('lib/stream-debugger-1.0.jar')
-
     testCompile files('lib/stream-debugger-1.0.jar')
 }
