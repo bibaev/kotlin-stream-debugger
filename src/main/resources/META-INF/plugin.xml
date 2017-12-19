@@ -24,9 +24,9 @@
     <depends optional="false">org.jetbrains.debugger.streams</depends>
 
     <extensions defaultExtensionNs="org.jetbrains.debugger.streams">
-        <librarySupport implementation="com.intellij.debugger.streams.kotlin.lib.JavaStandardLibrarySupportProvider"/>
-        <librarySupport implementation="com.intellij.debugger.streams.kotlin.lib.StreamExLibrarySupportProvider"/>
-        <librarySupport implementation="com.intellij.debugger.streams.kotlin.lib.KotlinSequenceSupportProvider"/>
+        <librarySupport implementation="com.intellij.debugger.streams.kotlin.lib.java.JavaStandardLibrarySupportProvider"/>
+        <librarySupport implementation="com.intellij.debugger.streams.kotlin.lib.java.StreamExLibrarySupportProvider"/>
+        <librarySupport implementation="com.intellij.debugger.streams.kotlin.lib.sequence.KotlinSequenceSupportProvider"/>
         <!--<librarySupport implementation="com.intellij.debugger.streams.kotlin.lib.KotlinCollectionSupportProvider"/>-->
     </extensions>
 
