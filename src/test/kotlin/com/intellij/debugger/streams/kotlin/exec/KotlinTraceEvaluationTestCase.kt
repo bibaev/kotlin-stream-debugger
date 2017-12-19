@@ -2,7 +2,7 @@
 package com.intellij.debugger.streams.kotlin.exec
 
 import com.intellij.debugger.impl.OutputChecker
-import com.intellij.debugger.streams.kotlin.LibraryManager
+import com.intellij.debugger.streams.kotlin.LibraryUtil
 import com.intellij.debugger.streams.lib.LibrarySupportProvider
 import com.intellij.debugger.streams.test.TraceExecutionTestCase
 import com.intellij.execution.configurations.JavaParameters
@@ -21,7 +21,7 @@ import java.nio.file.Paths
 /**
  * @author Vitaliy.Bibaev
  */
-abstract class KotlinEvaluationTestCase : TraceExecutionTestCase() {
+abstract class KotlinTraceEvaluationTestCase : TraceExecutionTestCase() {
   private companion object {
     val STDLIB_JAR_NAME = "kotlin-stdlib.jar"
   }
@@ -34,14 +34,14 @@ abstract class KotlinEvaluationTestCase : TraceExecutionTestCase() {
   override fun setUpModule() {
     super.setUpModule()
     ApplicationManager.getApplication().runWriteAction {
-      VfsRootAccess.allowRootAccess(LibraryManager.LIBRARIES_DIRECTORY)
-      PsiTestUtil.addLibrary(myModule, "${LibraryManager.LIBRARIES_DIRECTORY}/$STDLIB_JAR_NAME")
+      VfsRootAccess.allowRootAccess(LibraryUtil.LIBRARIES_DIRECTORY)
+      PsiTestUtil.addLibrary(myModule, "${LibraryUtil.LIBRARIES_DIRECTORY}/$STDLIB_JAR_NAME")
     }
   }
 
   override fun createJavaParameters(mainClass: String?): JavaParameters {
     val javaParameters = super.createJavaParameters(mainClass)
-    javaParameters.classPath.add("${LibraryManager.LIBRARIES_DIRECTORY}/$STDLIB_JAR_NAME")
+    javaParameters.classPath.add("${LibraryUtil.LIBRARIES_DIRECTORY}/$STDLIB_JAR_NAME")
     return javaParameters
   }
 
@@ -49,7 +49,7 @@ abstract class KotlinEvaluationTestCase : TraceExecutionTestCase() {
     return KotlinOutputChecker(testAppPath, appOutputPath)
   }
 
-  override fun createLocalProcess(className: String?) {
+  override fun createLocalProcess(className: String) {
     super.createLocalProcess(className + "Kt")
   }
 

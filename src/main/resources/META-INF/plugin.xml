@@ -26,6 +26,7 @@
     <extensions defaultExtensionNs="org.jetbrains.debugger.streams">
         <librarySupport implementation="com.intellij.debugger.streams.kotlin.lib.JavaStandardLibrarySupportProvider"/>
         <librarySupport implementation="com.intellij.debugger.streams.kotlin.lib.StreamExLibrarySupportProvider"/>
+        <!--<librarySupport implementation="com.intellij.debugger.streams.kotlin.lib.KotlinCollectionSupportProvider"/>-->
     </extensions>
 
 </idea-plugin>
