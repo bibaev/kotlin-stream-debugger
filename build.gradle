@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.1.51'
+    ext.kotlin_version = '1.2.10'
     repositories {
         maven { url 'http://dl.bintray.com/jetbrains/intellij-plugin-service' }
         mavenCentral()
@@ -43,7 +43,7 @@ intellij {
     pluginName = 'kotlin-stream-debugger'
     updateSinceUntilBuild = false
 
-    plugins = ['org.jetbrains.kotlin:1.1.51-release-IJ2017.3-1'
+    plugins = ['org.jetbrains.kotlin:1.2.10-release-IJ2017.3-1'
                /*'org.jetbrains.debugger.streams'*/]
     sandboxDirectory = project.rootDir.canonicalPath + "/.sandbox"
 }
