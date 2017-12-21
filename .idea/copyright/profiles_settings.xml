@@ -1,5 +1,8 @@
 <component name="CopyrightManager">
-  <settings default="stream_debugger_short">
+  <settings>
+    <module2copyright>
+      <element module="Project Files" copyright="stream_debugger_short" />
+    </module2copyright>
     <LanguageOptions name="JAVA">
       <option name="fileTypeOverride" value="3" />
       <option name="addBlankAfter" value="false" />
