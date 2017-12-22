@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>org.jetbrains.debugger.streams.kotlin</id>
-    <name>Kotlin High-order Functions Debugger</name>
+    <name>Kotlin Sequence Debugger</name>
     <version>0.0.1</version>
     <vendor url="https://www.jetbrains.com">JetBrains</vendor>
 
