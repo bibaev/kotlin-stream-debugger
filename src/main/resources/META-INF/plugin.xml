@@ -5,14 +5,24 @@
     <vendor url="https://www.jetbrains.com">JetBrains</vendor>
 
     <description><![CDATA[
-      <p>TODO
+      <p>A kotlin extension for
+      <a href="https://plugins.jetbrains.com/plugin/9696-java-stream-debugger">Java Stream Debugger</a> plugin.
+      The plugin provides an ability to debug method chains with Kotlin Sequences.
+      </p>
+
+      <p>The plugin is still under development, so expect a couple of glitches here and there, and,
+      of course, we really appreciate your feedback, including error reports, and we have set up an
+      <a href="https://youtrack.jetbrains.com/issues?q=project:%20Kotlin%20Subsystems:%20%7BIDE.%20Debugger%7D%20">issue tracker</a>
+      just for that.
       </p>
     ]]></description>
 
     <change-notes><![CDATA[
       0.0.1 <br>
         <ul>
-            <li> TODO</li>
+            <li>Support Kotlin Sequences</li>
+            <li>Support Java 8 Streams</li>
+            <li>Support <a href="https://github.com/amaembo/streamex">StreamEx</a> library </li>
         </ul>
     ]]>
     </change-notes>
