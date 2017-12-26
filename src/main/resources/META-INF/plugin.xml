@@ -5,31 +5,33 @@
     <vendor url="https://www.jetbrains.com">JetBrains</vendor>
 
     <description><![CDATA[
-      <p>A kotlin extension for
-      <a href="https://plugins.jetbrains.com/plugin/9696-java-stream-debugger">Java Stream Debugger</a> plugin.
-      The plugin provides an ability to debug method chains with Kotlin Sequence usages. To see what's happening
-      in the chain, click on the <em>Trace Current Stream Chain</em> button, which becomes active when debugger stops inside of a
-      chain of Stream API calls.
+      <p>A Kotlin extension for
+      <a href="https://plugins.jetbrains.com/plugin/9696-java-stream-debugger">Java Stream Debugger</a> plugin.</p>
+
+      <p>
+      The extension enables debugging method chains with Kotlin Sequence usages. To see what's happening in the chain,
+      click on the <em>Trace Current Stream Chain</em> button, which becomes active when debugger stops inside of a
+      chain of Kotlin Sequences API calls.
       </p>
 
       <img src="https://raw.githubusercontent.com/bibaev/static/master/kt/stop.png" height="300" width="750">
 
-      <p>After you click it, the current data stream is evaluated and you get a visualization of what exactly happens to each element
-      from the first call to last, with changes occurring gradually as it's passing thru all the steps:</p>
+      <p>After you click it, the current data stream is evaluated and you get a visualization of what exactly happens
+      to each element from the first call to the last, with changes occurring gradually as it's passing through
+      all the steps:</p>
 
       <img src="https://raw.githubusercontent.com/bibaev/static/master/kt/flat.png" height="300" width="750">
 
-      <p>The <em>Split Mode button</em> in the left bottom corner lets you choose whether you want to see all operations at once or
-      separately:</p>
+      <p>The <em>Split Mode button</em> in the left bottom corner lets you choose whether you want to see all operations
+       at once or separately:</p>
 
       <img src="https://raw.githubusercontent.com/bibaev/static/master/kt/split.png" height="300" width="750">
 
-      <p>In the latter mode, you can switch between operations manually using the tabs on top.</p>
+      <p>In the latter mode, you can switch between operations manually using the tabs at the top.</p>
 
-      <p>The plugin is still under development, so expect a couple of glitches here and there, and,
-      of course, we really appreciate your feedback, including error reports, and we have set up an
-      <a href="https://youtrack.jetbrains.com/issues?q=project:%20Kotlin%20Subsystems:%20%7BIDE.%20Debugger%7D%20">issue tracker</a>
-      just for that.
+      <p>The extension is still under development, so expect a couple of glitches here and there, and, of course,
+      we really appreciate your feedback, including error reports. Please submit them to
+      <a href="https://youtrack.jetbrains.com/issues?q=project:%20Kotlin%20Subsystems:%20%7BIDE.%20Debugger%7D%20">the issue tracker</a>
       </p>
     ]]></description>
 
