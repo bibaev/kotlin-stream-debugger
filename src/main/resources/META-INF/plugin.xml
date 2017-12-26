@@ -7,8 +7,24 @@
     <description><![CDATA[
       <p>A kotlin extension for
       <a href="https://plugins.jetbrains.com/plugin/9696-java-stream-debugger">Java Stream Debugger</a> plugin.
-      The plugin provides an ability to debug method chains with Kotlin Sequences.
+      The plugin provides an ability to debug method chains with Kotlin Sequence usages. To see what's happening
+      in the chain, click on the <em>Trace Current Stream Chain</em> button, which becomes active when debugger stops inside of a
+      chain of Stream API calls.
       </p>
+
+      <img src="https://raw.githubusercontent.com/bibaev/static/master/kt/stop.png" height="300" width="750">
+
+      <p>After you click it, the current data stream is evaluated and you get a visualization of what exactly happens to each element
+      from the first call to last, with changes occurring gradually as it's passing thru all the steps:</p>
+
+      <img src="https://raw.githubusercontent.com/bibaev/static/master/kt/flat.png" height="300" width="750">
+
+      <p>The <em>Split Mode button</em> in the left bottom corner lets you choose whether you want to see all operations at once or
+      separately:</p>
+
+      <img src="https://raw.githubusercontent.com/bibaev/static/master/kt/split.png" height="300" width="750">
+
+      <p>In the latter mode, you can switch between operations manually using the tabs on top.</p>
 
       <p>The plugin is still under development, so expect a couple of glitches here and there, and,
       of course, we really appreciate your feedback, including error reports, and we have set up an
