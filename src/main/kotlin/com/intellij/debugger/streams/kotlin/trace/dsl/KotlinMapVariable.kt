@@ -15,14 +15,14 @@ class KotlinMapVariable(type: MapType, name: String) : MapVariableBase(type, nam
   override fun set(key: Expression, newValue: Expression): Expression =
     TextExpression("${toCode()}[${key.toCode()}] = ${newValue.toCode()}")
 
-  override fun contains(key: Expression): Expression = TextExpression("${key.toCode()} in ${toCode()}")
+  override fun contains(key: Expression): Expression = TextExpression("(${key.toCode()} in ${toCode()})")
 
   override fun size(): Expression = TextExpression("${toCode()}.size")
 
   override fun keys(): Expression = TextExpression("${toCode()}.keys")
 
   override fun computeIfAbsent(key: Expression, supplier: Lambda): Expression =
-      TextExpression("${toCode()}.getOrPut(${key.toCode()}, ${supplier.toCode()})")
+      TextExpression("${toCode()}.computeIfAbsent(${key.toCode()}, ${supplier.toCode()})")
 
   override fun defaultDeclaration(isMutable: Boolean): VariableDeclaration =
     KotlinVariableDeclaration(this, false, type.defaultValue)

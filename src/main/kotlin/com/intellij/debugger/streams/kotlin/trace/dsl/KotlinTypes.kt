@@ -64,5 +64,18 @@ object KotlinTypes : Types {
       else -> ClassTypeImpl(type.genericTypeName + '?', type.defaultValue)
     }
   }
+
+  private val primitiveTypesIndex: Map<String, GenericType> =
+      listOf(KotlinTypes.BOOLEAN, KotlinTypes.BYTE, KotlinTypes.INT, KotlinTypes.SHORT,
+          KotlinTypes.CHAR, KotlinTypes.LONG, KotlinTypes.FLOAT, KotlinTypes.DOUBLE)
+          .associate { it.genericTypeName to it }
+
+  private val primitiveArraysIndex: Map<String, ArrayType> = primitiveTypesIndex.asSequence()
+      .map { array(it.value) }
+      .associate { it.genericTypeName to it }
+
+  fun primitiveTypeByName(typeName: String): GenericType? = primitiveTypesIndex[typeName]
+
+  fun primitiveArrayByName(typeName: String): ArrayType? = primitiveArraysIndex[typeName]
 }
 
