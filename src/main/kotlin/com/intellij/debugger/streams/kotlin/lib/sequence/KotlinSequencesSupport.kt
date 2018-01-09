@@ -39,6 +39,8 @@ class KotlinSequencesSupport : LibrarySupportBase() {
     addIntermediateOperationsSupport(OrderBasedOperation("zipWithNext", PairMapResolver()))
 
     addIntermediateOperationsSupport(OrderBasedOperation("mapNotNull", FilteredMapResolver()))
+    addIntermediateOperationsSupport(OrderBasedOperation("mapIndexedNotNullTo", FilteredMapResolver()))
+
     addIntermediateOperationsSupport(OrderBasedOperation("chunked", ChunkedResolver()))
     addIntermediateOperationsSupport(OrderBasedOperation("windowed", WindowedResolver()))
   }
