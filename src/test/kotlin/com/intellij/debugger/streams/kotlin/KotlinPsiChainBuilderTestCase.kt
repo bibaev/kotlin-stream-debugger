@@ -47,7 +47,7 @@ abstract class KotlinPsiChainBuilderTestCase(private val relativePath: String) :
     ApplicationManager.getApplication().runWriteAction {
       if (ProjectLibraryTable.getInstance(LightPlatformTestCase.getProject()).getLibraryByName(stdLibName) == null) {
         VfsRootAccess.allowRootAccess(LibraryUtil.LIBRARIES_DIRECTORY)
-        PsiTestUtil.addLibrary(testRootDisposable, LightPlatformTestCase.getModule(), stdLibName,
+        PsiTestUtil.addLibrary(LightPlatformTestCase.getModule(), stdLibName,
             LibraryUtil.LIBRARIES_DIRECTORY, LibraryUtil.KOTLIN_STD_LIBRARY_JAR_NAME)
       }
     }

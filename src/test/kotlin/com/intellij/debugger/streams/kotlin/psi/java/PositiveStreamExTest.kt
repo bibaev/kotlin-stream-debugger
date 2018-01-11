@@ -19,7 +19,7 @@ class PositiveStreamExTest : KotlinPsiChainBuilderTestCase.Positive("streams/pos
     super.setUp()
     ApplicationManager.getApplication().runWriteAction {
       VfsRootAccess.allowRootAccess(LibraryUtil.LIBRARIES_DIRECTORY)
-      PsiTestUtil.addLibrary(testRootDisposable, LightPlatformTestCase.getModule(),
+      PsiTestUtil.addLibrary(LightPlatformTestCase.getModule(),
           "StreamEx", LibraryUtil.LIBRARIES_DIRECTORY, "streamex-0.6.5.jar")
     }
   }
