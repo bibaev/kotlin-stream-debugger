@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>org.jetbrains.debugger.streams.kotlin</id>
     <name>Kotlin Sequence Debugger</name>
-    <version>0.0.2-android-30</version>
+    <version>0.0.2-Studio3.0-1</version>
     <vendor url="https://www.jetbrains.com">JetBrains</vendor>
 
     <description><![CDATA[
@@ -52,7 +52,7 @@
     </change-notes>
 
     <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
-    <idea-version since-build="171" until-build="173.*"/>
+    <idea-version since-build="171" until-build="172.*"/>
 
     <depends optional="false">org.jetbrains.kotlin</depends>
     <depends optional="false">org.jetbrains.debugger.streams</depends>
