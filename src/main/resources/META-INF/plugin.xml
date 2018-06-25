@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>org.jetbrains.debugger.streams.kotlin</id>
     <name>Kotlin Sequence Debugger</name>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <vendor url="https://www.jetbrains.com">JetBrains</vendor>
 
     <description><![CDATA[
@@ -36,6 +36,13 @@
     ]]></description>
 
     <change-notes><![CDATA[
+      0.0.2 <br>
+        <ul>
+            <li>Fix compatibility issue with 2018.3</li>
+            <li>Support mapIndexedNotNull operation</li>
+            <li>Minor bugfixes</li>
+        </ul>
+
       0.0.1 <br>
         <ul>
             <li>Support Kotlin Sequences</li>
@@ -46,7 +53,7 @@
     </change-notes>
 
     <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
-    <idea-version since-build="173"/>
+    <idea-version since-build="183.312"/>
 
     <depends optional="false">org.jetbrains.kotlin</depends>
     <depends optional="false">org.jetbrains.debugger.streams</depends>
