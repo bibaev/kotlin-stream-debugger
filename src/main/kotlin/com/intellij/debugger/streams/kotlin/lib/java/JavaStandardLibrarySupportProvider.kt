@@ -1,6 +1,7 @@
 // Copyright 2000-2017 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
 package com.intellij.debugger.streams.kotlin.lib.java
 
+import com.intellij.debugger.streams.kotlin.lib.CompatibilityUtil
 import com.intellij.debugger.streams.kotlin.lib.LibraryUtil
 import com.intellij.debugger.streams.kotlin.psi.impl.KotlinChainTransformerImpl
 import com.intellij.debugger.streams.kotlin.psi.impl.PackageBasedCallChecker
@@ -22,9 +23,10 @@ import com.intellij.openapi.project.Project
  */
 class JavaStandardLibrarySupportProvider : LibrarySupportProvider {
   private companion object {
-    val builder = TerminatedChainBuilder(
-        KotlinChainTransformerImpl(JavaStreamChainTypeExtractor()),
-        PackageBasedCallChecker("java.util.stream"))
+    val builder = CompatibilityUtil.makeCompatible {
+      TerminatedChainBuilder(KotlinChainTransformerImpl(JavaStreamChainTypeExtractor()),
+              PackageBasedCallChecker("java.util.stream"))
+    }
     val support = StandardLibrarySupport()
     val dsl = DslImpl(KotlinStatementFactory(JavaPeekCallFactory()))
   }
