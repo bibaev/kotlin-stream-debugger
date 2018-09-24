@@ -14,12 +14,13 @@ import com.intellij.debugger.streams.wrapper.StreamChain
 import com.intellij.debugger.streams.wrapper.impl.*
 import com.intellij.openapi.util.TextRange
 import com.intellij.psi.PsiElement
-import org.jetbrains.kotlin.idea.caches.resolve.analyzeFully
+import org.jetbrains.kotlin.idea.caches.resolve.analyze
 import org.jetbrains.kotlin.psi.KtCallExpression
 import org.jetbrains.kotlin.psi.KtDotQualifiedExpression
 import org.jetbrains.kotlin.psi.KtValueArgument
 import org.jetbrains.kotlin.resolve.calls.callUtil.getParameterForArgument
 import org.jetbrains.kotlin.resolve.calls.callUtil.getResolvedCall
+import org.jetbrains.kotlin.resolve.lazy.BodyResolveMode
 
 /**
  * @author Vitaliy.Bibaev
@@ -53,7 +54,8 @@ class KotlinChainTransformerImpl(private val typeExtractor: CallTypeExtractor) :
       return CallArgumentImpl(KotlinPsiUtil.getTypeName(argExpression.resolveType()), this.text)
     }
 
-    val bindingContext = callExpression.analyzeFully()
+
+    val bindingContext = callExpression.analyze(BodyResolveMode.PARTIAL)
     val resolvedCall = callExpression.getResolvedCall(bindingContext) ?: return arg.toCallArgument()
     val parameter = resolvedCall.getParameterForArgument(arg) ?: return arg.toCallArgument()
     return CallArgumentImpl(KotlinPsiUtil.getTypeName(parameter.type), arg.text)
