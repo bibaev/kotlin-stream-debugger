@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>org.jetbrains.debugger.streams.kotlin</id>
     <name>Kotlin Sequence Debugger</name>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <vendor url="https://www.jetbrains.com">JetBrains</vendor>
 
     <description><![CDATA[
@@ -36,6 +36,11 @@
     ]]></description>
 
     <change-notes><![CDATA[
+      0.0.3 <br>
+        <ul>
+            <li>Make compatible with Kotlin plugin 1.3</li>
+        </ul>
+
       0.0.2 <br>
         <ul>
             <li>Fix compatibility issue with 2018.3</li>
@@ -53,7 +58,7 @@
     </change-notes>
 
     <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
-    <idea-version since-build="183.312"/>
+    <idea-version since-build="173"/>
 
     <depends optional="false">org.jetbrains.kotlin</depends>
     <depends optional="false">org.jetbrains.debugger.streams</depends>
